@@ -1,0 +1,48 @@
+/// HEART BEAT RATE ///
+
+int LED1 = A0;
+int LED2 = A1;
+
+int BZZR = A2;
+
+int HB = A3;
+
+int tmp = A4;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(BZZR, OUTPUT);
+  pinMode(HB, INPUT);
+  pinMode(tmp, INPUT);
+
+}
+
+void loop() {
+
+  /*
+  int HBRes = analogRead(HB);
+  Serial.println(HBRes);
+
+  
+  analogWrite(LED1, 255);
+  analogWrite(LED2, 0);
+  analogWrite(BZZR, 256);
+  delay(200);
+  
+  analogWrite(LED1, 0);
+  analogWrite(LED2, 255);
+  analogWrite(BZZR, 0);
+  delay(200);
+
+
+
+  */
+
+  
+  int temp = analogRead(tmp);
+  Serial.println(temp);
+  delay(3000);
+  
+}
